@@ -20,7 +20,7 @@ app.get('/books', async (req, res) => {
 })
 
 app.post('/books', async (req, res) => {
-    await booksCollection.up(req.body)
+    await booksCollection.insertOne(req.body)
 
     res.send(req.body)
 })
